@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/tema.css" />
+    <title>Tema 4</title>
+  </head>
+  <body>
+    <header>
+      <nav class="headernav">
+        <button class="menuikon">
+          <span class="topline"></span>
+          <span class="bottomline"></span>
+        </button>
+        <div class="logo">
+          <a href="index.html" class="logo-text">R4_T</a>
+        </div>
+        <ul class="menu">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <div id="dropdown-menu">
+              <div class="flex">
+                <a class="panel visiting" href="projects.html">projects </a>
+                <div class="dropdown-ikon"></div>
+              </div>
+              <div class="dropdown-indhold">
+                <a href="tema2.html">Tema 2</a>
+                <a href="tema3.html">Tema 3</a>
+                <a id="visiting" href="tema4.html">Tema 4</a>
+                <a href="tema5.html">Tema 5</a>
+              </div>
+            </div>
+          </li>
+          <li class="socialmedia">
+            <a href=""> <img src="imgs/svg/linkedin.svg" alt="linkedin" /></a>
+            <a href=""><img src="imgs/svg/instagram.svg" alt="instagram" /></a>
+            <a href=""><img src="imgs/svg/facebook.svg" alt="facebook" /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <canvas id="canvas"></canvas>
+    <div class="background"></div>
+    <main>
+      <div class="tema-slide">
+        <a href="tema3.html" class="prev-tema">&#10094;</a>
+        <h1>Tema 4</h1>
+        <a href="tema5.html" class="next-tema">&#10095;</a>
+      </div>
+      <div class="intro">
+        <h2>Grund&shy;læggende Bruger&shy;grænseflader</h2>
+        <p>I dette fire ugers tema på 1. semester fokuserede vi fortsat på grundlæggende brugergrænsefladeudvikling (UI), hvor vi blev introducerede til vektorgrafik og Javascript.</p>
+        <p>Er du ikke interesseret i en gennemgang af temaet, kan du gå direkte til mit færdige website <a href="https://certifiedrat.github.io/emergency_site/" class="tema-link">her</a></p>
+      </div>
+      <section class="process tema-sektion">
+        <div class="grid_5fr">
+          <button class="tema-img-btn img-1" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img1" src="imgs/tema4/wateranimation.gif" alt="water animation" />
+          </button>
+          <button id="c3-6" class="tema-img-btn img-2 m20" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img2" src="imgs/tema4/sketch.webp" alt="sketched idea" />
+          </button>
+          <button class="tema-img-btn img-3" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img3" src="imgs/tema4/styletiles.webp" alt="styletiles dark/light" />
+          </button>
+          <p class="zoom-info">Click the images to zoom</p>
+        </div>
+        <div class="tema-frame">
+          <div class="tema-txt">
+            <h2>Formål</h2>
+            <p>Hovedopgaven var at udvikle et individuelt 'Emergency Site'. Med udgangspunkt i et udleveret kodefundament fik vi frie tøjler til selv at vælge et krisescenarie. Jeg valgte den yderst akutte nødsituation: at der er gået hul på plastikposen, som du bærer din nye guldfisk i!</p>
+            <p>Forløbet åbnede op for især to nye værktøjer; Vektorgrafik og JavaScript. I modsætning til faste-pixelbaserede formater, er vektorgrafik opbygget af matematiske formler, punkter og linjer. De fortæller hvor og hvordan pixels skal farves/formes/placeres, hvilket betyder at det kan skaleres uendeligt uden at miste opløsning, da dets pixel ikke er faste/forudbestemte, men I stedet kalkulerede.</p>
+            <p>JavaScript er et programmeringssprog du kan bruge til at gøre din hjemmeside interaktiv, med mere avancerede funktioner som eks. animationer, visuelle effekter og dataopsamling. Hvis det stadig virker meget uhåndgribeligt, fik vi det simplificeret således: HTML kan forstås som skelettet på et hus, CSS er beklædningen og JavaScript er elektriciteten.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reflektioner tema-sektion">
+        <div class="grid_5fr">
+          <button class="tema-img-btn img-1 m20" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img1 btn-border" src="imgs/tema4/logoer.webp" alt="sticker result example" />
+          </button>
+          <button class="tema-img-btn img-2 btn-border" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img2" src="imgs/tema4/stickerresult.webp" alt="logo designs" />
+          </button>
+          <button id="c1-7" class="tema-img-btn img-3" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img3" src="imgs/tema4/illustratorprocess.webp" alt="process in illustrator" />
+          </button>
+          <p class="zoom-info">Click the images to zoom</p>
+        </div>
+        <div class="tema-frame-inverted">
+          <div class="tema-txt">
+            <h2>Process</h2>
+            <p>Vi skulle lave et selvvalgt motiv til vores infografik i Adobe Illustrator, med mindst 3 inkorporerede områder til interaktion. Grafikken blev eksporteret som SVG (Scaleable Vector Graphics), og derefter implementeret I vores kode som text format, så vi kunne tilgå vores klikbare områder. De blev gjort interaktive med JavaScript, så der skete noget visuelt når du bevæger musen over og ud fra området, samt et tekstfelt/instruktion ved klik.</p>
+            <p>Et af kravene var at kode og style en funktionel HTML-formular, der med JavaScript opsamler brugerinput/data tilpasset vores nødsituations emne. Jeg valgte at lave en formular hvor du kunne designe din guldfisk oplevelse, som du derefter kunne gemme som et "klistermærke".</p>
+            <p>Derudover brugte jeg også en del tid på at få vandstrålerne til at 'løbe', ved at tilføje 3 ekstra udgaver at strålerne oven på hinanden i min SVG, som på skift blev synlige vha. CSS. (+ At få fisken til at bevæge sig I vandet). Tror også jeg nørklede med ekstra javascript til mine interaktive områder - igen på bekostning af det samlede resultat.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="resultat tema-sektion">
+        <div class="grid_5fr">
+          <button class="tema-img-btn img-1" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img1" src="imgs/tema4/naerkontakt.webp" alt="screenshot" />
+          </button>
+          <button class="tema-img-btn img-2 m20" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img2" src="imgs/tema4/form-light-dark.webp" alt="dark/light mode" />
+          </button>
+          <button class="tema-img-btn img-3" popovertarget="imgpopup" aria-label="Enlarge Image">
+            <img class="tema-img img3" src="imgs/tema4/resultat.webp" alt="resultat" />
+          </button>
+          <div id="imgpopup" popover>
+            <button popovertarget="imgpopup" popovertargetaction="hide" class="close-popover" aria-label="close window">&times;</button>
+            <img id="imgpopover" src="img" alt="Image enlarged" />
+          </div>
+          <p class="zoom-info">Click the images to zoom</p>
+        </div>
+        <div class="tema-frame">
+          <div class="tema-txt">
+            <h2>Resultat</h2>
+            <p>Den endelige løsning består af et interaktivt website fordelt på tre sider. Da projektet tog udgangspunkt i et præ-fabrikeret ramme (wireframes/layoutdiagrammer), fik jeg øvet min faglige kildekode-forståelse ved at bygge videre på eksisterende kode (nok lidt for meget).</p>
+            <p>Som i Tema 3, fik jeg dog igen tunnelsyn mht. at lave unødvendig kode, så der er en del der halter på den visuelle side. Eks. har jeg glemt at sætte mit logo ind på de fleste sider, samt mit overskrifts banner er sort i light-mode.</p>
+
+            <p>Du kan se websitet her <a class="btn-design" href="https://certifiedrat.github.io/emergency_site/">Goldfish Rescue</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="grid_footer">
+        <div class="logo">
+          <a href="index.html" class="logo-text">R4_T</a>
+        </div>
+        <div class="socialmedia">
+          <a href=""> <img src="imgs/svg/linkedin.svg" alt="linkedin" /></a>
+          <a href=""><img src="imgs/svg/instagram.svg" alt="instagram" /></a>
+          <a href=""><img src="imgs/svg/facebook.svg" alt="facebook" /></a>
+        </div>
+        <nav>
+          <ul class="footernav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="projects" href="projects.html">Projects</a></li>
+          </ul>
+        </nav>
+        <p class="name">L4u_R4_T 🟄 2026</p>
+      </div>
+    </footer>
+    <script src="js/generel.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

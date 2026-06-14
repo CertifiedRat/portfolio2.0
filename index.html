@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <nav class="headernav">
+        <button class="menuikon" aria-label="open mobile menu">
+          <span class="topline"></span>
+          <span class="bottomline"></span>
+        </button>
+        <div class="logo">
+          <a href="index.html" class="logo-text">R4_T</a>
+        </div>
+        <ul class="menu">
+          <li>
+            <a id="visiting" href="index.html">home</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <div id="dropdown-menu">
+              <div class="flex">
+                <a class="panel" href="projects.html">projects </a>
+                <div class="dropdown-ikon"></div>
+              </div>
+              <div class="dropdown-indhold">
+                <a href="tema2.html">Tema 2</a>
+                <a href="tema3.html">Tema 3</a>
+                <a href="tema4.html">Tema 4</a>
+                <a href="tema5.html">Tema 5</a>
+              </div>
+            </div>
+          </li>
+          <li class="socialmedia">
+            <a href=""> <img src="imgs/svg/linkedin.svg" alt="linkedin" /></a>
+            <a href=""><img src="imgs/svg/instagram.svg" alt="instagram" /></a>
+            <a href=""><img src="imgs/svg/facebook.svg" alt="facebook" /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <canvas id="canvas"></canvas>
+
+    <div class="background"></div>
+    <main id="index">
+      <div class="indexhero">
+        <h1 class="index">Portfolio</h1>
+        <h2 class="index">Multimediedesigner</h2>
+      </div>
+      <section class="projekter">
+        <div class="grid">
+          <h2 class="bigger">Projekter</h2>
+          <div class="slideshow-container">
+            <!-- Wrapper for sliding side-by-side -->
+            <div class="slide-wrapper">
+              <div class="slide">
+                <a href="tema2.html"><img src="imgs/tema2/banner.webp" alt="Slide 1, Tema 2" /></a>
+              </div>
+              <div class="slide">
+                <a href="tema3.html"><img src="imgs/tema3/banner.webp" alt="Slide 2, Tema 3" /></a>
+              </div>
+              <div class="slide">
+                <a href="tema4.html"><img src="imgs/tema4/banner.webp" alt="Slide 3, Tema 4" /></a>
+              </div>
+              <div class="slide">
+                <a href="tema5.html"><img src="imgs/tema5/banner.webp" alt="Slide 4, Tema 5" /></a>
+              </div>
+            </div>
+
+            <!-- Next/Prev Buttons -->
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+          </div>
+
+          <!-- Indicator Dots -->
+          <div class="dot-container">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+          <a href="projects.html" class="btn-design center">All Projects</a>
+        </div>
+      </section>
+      <section class="about">
+        <div class="desktop_1-1">
+          <div class="grid txt-bg gap">
+            <h2>R4_T ?</h2>
+            <p>Har du undret dig over hvorfor der er en stregkode i toppen? Eller ser du den først nu? Måske er du bare nysgerrig på personen bag regnvejret, either way kan du måske få svar på noget her.</p>
+            <a href="about.html" class="btn-design">See More</a>
+          </div>
+          <img class="index-img" src="imgs/drawings/dino.webp" alt="dinosaur drawing" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="grid_footer">
+        <div class="logo">
+          <a href="index.html" class="logo-text">R4_T</a>
+        </div>
+        <div class="socialmedia">
+          <a href=""> <img src="imgs/svg/linkedin.svg" alt="linkedin" /></a>
+          <a href=""><img src="imgs/svg/instagram.svg" alt="instagram" /></a>
+          <a href=""><img src="imgs/svg/facebook.svg" alt="facebook" /></a>
+        </div>
+        <nav>
+          <ul class="footernav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="projects" href="projects.html">Projects</a></li>
+          </ul>
+        </nav>
+        <p class="name">L4u_R4_T 🟄 2026</p>
+      </div>
+    </footer>
+    <script src="js/generel.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/slideshow.js"></script>
+  </body>
+</html>
