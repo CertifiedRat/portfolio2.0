@@ -55,9 +55,29 @@ popup?.addEventListener("beforetoggle", function (event) {
 // bedre forståelse af at bruge if - betingelser/forudsætning for at kunne gå videre til næste skridt/aktion.
 //kilder: https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using
 
-//Rain Effect
+//_________________________________________________________________________________________________________
+const rainBtn = document.getElementById("weather");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+
+// Tjek om regnen er blevet deaktuveret på en tidligere side
+const weatherClicked = sessionStorage.getItem("weatherState") === "true";
+//i så fald deaktiver den igen
+if (weatherClicked) {
+  toggleRain();
+}
+
+rainBtn.addEventListener("click", toggleRain);
+function toggleRain() {
+  canvas.classList.toggle("none");
+  rainBtn.classList.toggle("noRain");
+  //gem klikket/indstillingen i den nuværende browsers.. lager? hukkommelse?
+  const rainRemoved = rainBtn.classList.contains("noRain");
+  sessionStorage.setItem("weatherState", rainRemoved);
+}
+//Bruger sessionStorage istedet for localStorage så regnen altid er slået til ved et nyt besøg/vindue
+//_________________________________________________________________________________________________________
+//Rain Effect
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;

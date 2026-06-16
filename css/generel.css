@@ -69,6 +69,10 @@ canvas {
   position: fixed;
   z-index: 1;
   opacity: 0.4;
+  transition: 0.2s ease-out;
+}
+canvas.none {
+  opacity: 0;
 }
 .background {
   display: block;
@@ -176,6 +180,9 @@ header {
     cursor: pointer;
     border: none;
   }
+  .menuikon:hover span {
+    background-color: var(--color-text);
+  }
   .topline,
   .bottomline {
     display: block;
@@ -183,8 +190,10 @@ header {
     width: 25px;
     margin-bottom: 8px;
     border-radius: 2px;
-    background-color: var(--color-text);
-    transition: 0.3s ease-out;
+    background-color: var(--color-text-grey);
+    transition:
+      0.3s ease-out,
+      color linear 0.01s;
   }
   .bottomline {
     width: 30px;
@@ -200,6 +209,27 @@ header {
   .logo {
     padding-inline: 1.5rem;
   }
+  #weather {
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    color: var(--color-text-grey);
+  }
+  #weather:hover {
+    color: var(--yellow);
+  }
+  .rainCloud {
+    display: none;
+  }
+  #weather.noRain {
+    .cloud {
+      display: none;
+    }
+    .rainCloud {
+      display: block;
+    }
+  }
+  /***********************/
   /* Mobil menu Åben */
   .menuikon.menuopen .topline {
     transform: rotate(135deg) translate(4px, -5px);
@@ -217,6 +247,10 @@ header {
     height: 500px;
     background-color: var(--dark);
     width: 100%;
+    #weather {
+      position: absolute;
+      bottom: 24px;
+    }
   }
   li a {
     font-family: var(--p);
@@ -373,33 +407,41 @@ footer {
     }
     .menu {
       display: flex;
-      position: relative;
       top: 0;
       right: 0;
       height: 60px;
-      gap: 2rem;
+      #weather {
+        position: relative;
+        right: 1.5rem;
+      }
     }
-    .menu li a,
-    a.panel {
+    .menu li a {
       align-content: center;
-      padding-inline: 0.5rem;
+      padding-inline: 1rem 2rem;
     }
     .menu li a:hover,
     #dropdown-menu a:hover {
       color: var(--color-text);
     }
     #dropdown-menu {
-      width: 200px;
       align-content: center;
+      width: 200px;
     }
     #dropdown-menu a {
       font-weight: 400;
     }
     #dropdown-menu .flex {
-      width: 125px;
       justify-content: space-between;
       height: 100%;
+      width: 140px;
       align-items: center;
+      text-align: center;
+      a {
+        padding: 0;
+      }
+      .dropdown-ikon:after {
+        padding: 0.5rem;
+      }
     }
     .dropdown-indhold {
       padding: 0 0.5rem 0.5rem;
@@ -569,6 +611,7 @@ section.useless {
 }
 .txt-bg {
   background-color: var(--img-bg);
+  backdrop-filter: blur(2px);
   align-self: center;
   height: fit-content;
   padding: 1rem;
@@ -609,7 +652,7 @@ section.useless {
 /**************************** Project Page Styling ************************************************/
 
 .tema-slide {
-  max-width: 350px;
+  max-width: fit-content;
   width: 100%;
   justify-self: center;
 }

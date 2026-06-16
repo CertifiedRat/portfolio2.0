@@ -15,7 +15,7 @@
 }
 /* index */
 .indexhero {
-  margin-block: 150px;
+  margin-block: 250px 300px;
   z-index: 2;
 }
 
@@ -44,13 +44,16 @@
 /* project page */
 .tema-slide {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
 }
 
 /***************** Desktop 800+ *********************************************************************/
 @media screen and (min-width: 800px) {
   .desktop_span2 {
     grid-column: span 2;
+  }
+  h1 {
+    font-size: 72px;
   }
   /* Index */
   .desktop_flex {
